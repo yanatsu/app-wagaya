@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item: MyString
+  space: MyString
+  stock: 
+  required: 
+
+two:
+  item: MyString
+  space: MyString
+  stock: 
+  required: 

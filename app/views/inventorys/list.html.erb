@@ -1,0 +1,49 @@
+    <header>
+
+    </header>
+    <main>
+        <h1 class="title">在庫リスト</h1>
+        <div class="box">
+            <div class="t-ble">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>項目</td>
+                            <td>在庫数</td>
+                            <td>最低在庫数</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @inventorys.each do |inventory| %>
+                        <tr>
+                            <td><%= link_to inventory.item, inventory_path(inventory) %></td>
+                            <td><%= inventory.stock %></td>
+                            <td><%= inventory.required %></td>
+                        </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+
+            <%# <div>
+                <div class="plus">追加</div>
+                <div class="minus">削減</div>
+            </div> %>
+            <div class="new-box">
+                <%# link_to '新規登録', inventorys_new_url  %>
+                <%= link_to '新規登録', 'new' %>
+            </div>
+
+            <%# <div class="save"> %>
+            <%#= f.submit '保存' %>
+            <%# </div> %>
+            <div class="return-box">
+                <%= link_to '戻る', 'javascript:history.back()' %>
+            </div>
+
+
+        </div>
+    </main>
+    <%# <footer id="footer">
+        footer
+    </footer> %>

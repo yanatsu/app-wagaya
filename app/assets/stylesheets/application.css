@@ -1,0 +1,117 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+header,
+footer {
+    background-color: #c4c4c4;
+    height: 3rem;
+    width: 100%;
+}
+
+.title {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.box {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+
+
+.t-ble {
+    display: inline-block;
+    margin: 0 auto;
+    overflow-y: scroll;
+    height: 10rem;
+    width: 80%;
+}
+
+table {
+    margin: 0 auto;
+    width: 100%;
+}
+
+thead {
+    background-color: #c4c4c4;
+}
+
+tbody {
+    white-space: nowrap;
+}
+
+.note {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.notices {
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+    color: red;
+    font-size: smaller;
+}
+
+.stock-box,
+.place-box,
+.return-box,
+.new-box,
+.edit-box,
+.delete-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1em 2em;
+    width: 10rem;
+    color: #333;
+    font-weight: 700;
+    background-color: #cccccc;
+    border-radius: 50vh;
+    margin-bottom: 2rem;
+}
+
+/* .stock-box,
+.place-box,
+.return-box,
+.new-box,
+.edit-box,
+.delete-box ::after {
+    content: '';
+    width: 10rem;
+    height: 5px;
+    border-top: 3px solid #333333;
+    border-right: 3px solid #333333;
+    transform: rotate(45deg);
+} */
+
+/* .stock-box,
+.place-box,
+.return-box,
+.new-box,
+.edit-box,
+.delete-box :hover {
+    text-decoration: none;
+    background-color: #bbbbbb;
+} */

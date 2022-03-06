@@ -1,0 +1,41 @@
+<header>
+
+</header>
+<main>
+    <h1 class="title">新規投稿</h1>
+    <div class="box">
+
+        <!-- form_for部分 -->
+        <%= form_with model: @inventory,:url => {:action => :create} do |f| %>
+
+        <h4>項目</h4>
+        <%= f.text_field :item %>
+
+        <h4>保存場所</h4>
+        <%= f.select :space, 
+        [["トイレ", "トイレ"], ["キッチン", "キッチン"],
+         ["浴室", "浴室"], ["リビング", "リビング"]],
+         include_blank: "選択して下さい" %>
+        <%# # 以下の一行がプルダウンを実装するためのコード（追記部分） %>
+        <%# <%= f.select :保存先のカラム名,
+          [["選択肢１", "実際にDBに保存させる内容"], ["選択肢２", "実際にDBに保存させる内容"]],
+           include_blank: "選択して下さい" %>
+
+        <h4>在庫数</h4>
+        <%= f.text_field :stock %>
+        <h4>最低在庫数</h4>
+        <%= f.text_field :required %>
+        <%# <div class="new-box"> %>
+        <%= f.submit '追加', :class=>"new-box" %>
+
+        <%# </div> %>
+        <% end %>
+        <div class="return-box">
+            <%= link_to 'topへ戻る', '/inventorys' %>
+        </div>
+    </div>
+
+</main>
+<%# <footer id="footer">
+    footer
+</footer> %>

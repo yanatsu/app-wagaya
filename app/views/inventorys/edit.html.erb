@@ -1,0 +1,29 @@
+<header>
+
+</header>
+<main>
+    <h1 class="title">編集</h1>
+    <div class="box">
+
+        <!-- form_for部分 -->
+        <%= form_with model: @inventory,:url => {:action => :update} do |f| %>
+        <h4>項目</h4>
+        <%= f.text_field :item %>
+        <h4>場所</h4>
+        <%= f.text_field :space %>
+        <h4>在庫数</h4>
+        <%= f.text_field :stock %>
+        <h4>最低在庫数</h4>
+        <%= f.text_field :required %>
+        <%# <div class="edit-box"> %>
+        <%= f.submit '更新', :class=>"edit-box" %>
+        <%# </div> %>
+        <% end %>
+        <div class="return-box">
+            <%= link_to 'topへ戻る', '/inventorys' %>
+        </div>
+    </div>
+</main>
+<%# <footer id="footer">
+    footer
+</footer> %>

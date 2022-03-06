@@ -1,0 +1,47 @@
+<header>
+
+</header>
+<main>
+
+    <h1 class="title">我が家の在庫管理</h1>
+    <div class="box">
+        <div class="note">
+            <p class="notices">購入必須</p>
+        </div>
+        <div class="t-ble">
+            <table>
+                <thead>
+                    <tr>
+                        <td>項目</td>
+                        <td>在庫数</td>
+                        <td>最低在庫数</td>
+                    </tr>
+                </thead>
+                <!-- ここから変更 -->
+                <tbody>
+                    <% @inventorys.each do |inventory| %>
+                    <% if inventory.stock < inventory.required %>
+                    <tr>
+                        <td><%= link_to inventory.item, inventory_path(inventory) %></td>
+                        <td><%= inventory.stock %></td>
+                        <td><%= inventory.required %></td>
+                    </tr>
+                    <% end %>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+        <!-- ここまで変更 -->
+        <div class="l-menu">
+            <%= link_to '買い物リスト 一覧へ', inventorys_menu_url %>
+        </div>
+
+    </div>
+    <div class="stock-box">
+        <%= link_to '在庫リスト', inventorys_place_url %>
+    </div>
+    </div>
+</main>
+<%# <footer id="footer">
+    footer
+</footer> %>
