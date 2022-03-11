@@ -3,10 +3,11 @@
 </header>
 <main>
     <h1 class="title">編集</h1>
-    <div class="box">
 
-        <!-- form_for部分 -->
-        <%= form_with model: @inventory,:url => {:action => :update} do |f| %>
+
+    <!-- form_for部分 -->
+    <%= form_with model: @inventory,:url => {:action => :update} do |f| %>
+    <div class="box">
         <h4>項目</h4>
         <%= f.text_field :item %>
         <h4>場所</h4>
@@ -15,14 +16,15 @@
         <%= f.text_field :stock %>
         <h4>最低在庫数</h4>
         <%= f.text_field :required %>
-        <%# <div class="edit-box"> %>
-        <%= f.submit '更新', :class=>"edit-box" %>
-        <%# </div> %>
-        <% end %>
-        <div class="return-box">
-            <%= link_to 'topへ戻る', '/inventorys' %>
-        </div>
     </div>
+    <%# <div class="edit-box"> %>
+    <%= f.submit '更新', :class=>"edit-box" %>
+    <%# </div> %>
+    <% end %>
+    <div class="return-box">
+        <%= link_to 'topへ戻る', '/inventorys' %>
+    </div>
+
 </main>
 <%# <footer id="footer">
     footer
