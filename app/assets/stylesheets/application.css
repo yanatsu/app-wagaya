@@ -81,7 +81,8 @@ tbody {
 .return-box,
 .new-box,
 .edit-box,
-.delete-box {
+.delete-box,
+.l-menu {
     display: flex;
     justify-content: center;
     align-items: center;

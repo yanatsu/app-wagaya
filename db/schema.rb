@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2022_03_05_145105) do
     t.string "space"
     t.bigint "stock"
     t.bigint "required"
+    t.text "note"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

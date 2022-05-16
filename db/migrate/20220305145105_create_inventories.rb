@@ -5,6 +5,8 @@ class CreateInventories < ActiveRecord::Migration[6.1]
       t.string :space
       t.bigint :stock
       t.bigint :required
+      # t.string :img
+      t.text :note
 
       t.timestamps
     end

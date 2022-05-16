@@ -59,8 +59,9 @@ def show
 
 private
   def inventory_params
-    params.require(:inventory).permit(:item, :space, :stock, :required)
-    # item:項目名、space:保管場所、stock:在庫数、required:最低在庫数
+    params.require(:inventory).permit(:item, :space, :stock, :required, :note)
+    # params.require(:inventory).permit(:item, :space, :stock, :required, :img, :note)
+    # item:項目名、space:保管場所、stock:在庫数、required:最低在庫数、img:画像、note:備考
   end
 
 end
